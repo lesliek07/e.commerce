@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas:  'navbar navbar'
+                          'aside main'
+                          'footer footer'
+
+    ;
+}
+.nav {
+    display:flex;
+    background-color: #000;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    grid-area: navbar;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+aside .categorias{
+    display: flex;
+    grid-area: aside;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+    background: #f4f4f4;
+    color: #020202;
+    padding: 30px;
+}
+.categorias h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+.categorias ul{
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+.categorias li:hover{
+    font-size: 17px;
+    font-weight: 600;
+}
+.categorias span{
+    font-weight: 300;
+}
+section .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-area: main;
+    gap: 15px;
+    padding: 25px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #f4f4f4;
+
+}
+
+.card img{
+    
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    
+}
+.nombre{
+    font-family: 'Montserrat', sans-serif;
+    color: #020202;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.precio{
+    font-family: 'Lato', sans-serif;
+    color: #020202;
+    font-style: italic;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+.card button{
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #a2e0e0;
+    color: #020202;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.card:hover{
+    box-shadow: 2px 2px 5px grey;
+}
+button:hover{
+    background-color: #1a9393;
+    color: aliceblue;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #000;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: aliceblue;
+    grid-area: footer;
+}
